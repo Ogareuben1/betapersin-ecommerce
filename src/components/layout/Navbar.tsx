@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // Import Image component
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Menu, X, Shield } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 // Link Definitions
 const courseLinks = [
@@ -25,14 +26,17 @@ export default function Navbar() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           
-          {/* 1. LOGO & BRAND */}
+          {/* 1. OFFICIAL LOGO SECTION */}
           <Link href="/" className="flex items-center gap-2 shrink-0 group">
-            <div className="bg-brand-navy p-1.5 rounded-lg transition-transform group-hover:scale-105">
-                <Shield className="h-6 w-6 text-brand-gold" />
+            <div className="relative h-16 w-48 transition-transform group-hover:scale-105">
+                <Image 
+                  src="/logo.png" 
+                  alt="BetapersinIAM Logo" 
+                  fill
+                  className="object-contain"
+                  priority
+                />
             </div>
-            <span className="hidden sm:block text-xl font-black tracking-tighter text-brand-navy">
-                BETAPERSIN
-            </span>
           </Link>
 
           {/* 2. DESKTOP LINKS */}
@@ -106,7 +110,6 @@ export default function Navbar() {
 
             <Link href="/store" className="text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">Store</Link>
             
-            {/* Blended CTA Button */}
             <Link 
               href="/contact" 
               className="ml-4 rounded-xl bg-brand-navy px-6 py-3 text-xs font-black uppercase tracking-widest text-brand-gold hover:bg-black transition-all shadow-lg hover:shadow-brand-gold/10 active:scale-95"
