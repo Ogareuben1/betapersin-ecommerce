@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X, Shield } from 'lucide-react';
 
 // Link Definitions
 const courseLinks = [
@@ -21,23 +21,24 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
+    <nav className="fixed top-0 z-50 w-full border-b border-brand-gold/10 bg-brand-cream/95 backdrop-blur-md">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           
-          {/* 1. LOGO */}
-          <Link href="/" className="flex items-center shrink-0">
-            <img 
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/GaacUkLWhRTud68Z/chatgpt-image-apr-19-2026-09_11_22-pm-qfzEV37ULnkiJFnj.png" 
-              alt="Betapersin logo" 
-              className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
+          {/* 1. LOGO & BRAND */}
+          <Link href="/" className="flex items-center gap-2 shrink-0 group">
+            <div className="bg-brand-navy p-1.5 rounded-lg transition-transform group-hover:scale-105">
+                <Shield className="h-6 w-6 text-brand-gold" />
+            </div>
+            <span className="hidden sm:block text-xl font-black tracking-tighter text-brand-navy">
+                BETAPERSIN
+            </span>
           </Link>
 
           {/* 2. DESKTOP LINKS */}
-          <div className="hidden lg:flex items-center gap-7">
-            <Link href="/" className="text-sm font-bold text-gray-600 hover:text-blue-700 transition">Home</Link>
-            <Link href="/about" className="text-sm font-bold text-gray-600 hover:text-blue-700 transition">About</Link>
+          <div className="hidden lg:flex items-center gap-8">
+            <Link href="/" className="text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">Home</Link>
+            <Link href="/about" className="text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">About</Link>
 
             {/* Courses Dropdown */}
             <div 
@@ -45,8 +46,8 @@ export default function Navbar() {
               onMouseEnter={() => setActiveDropdown('courses')}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:text-blue-700 transition">
-                Courses <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'courses' ? 'rotate-180' : ''}`} />
+              <button className="flex items-center gap-1 text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">
+                Courses <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === 'courses' ? 'rotate-180' : ''}`} />
               </button>
               
               <AnimatePresence>
@@ -55,13 +56,13 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute left-0 mt-2 w-72 bg-white border border-gray-100 shadow-2xl rounded-2xl p-2 overflow-hidden"
+                    className="absolute left-0 mt-1 w-72 bg-white border border-brand-gold/10 shadow-2xl rounded-2xl p-2 overflow-hidden"
                   >
                     {courseLinks.map((link) => (
                       <Link 
                         key={link.name} 
                         href={link.href} 
-                        className="block px-4 py-3 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-700 rounded-xl transition font-medium"
+                        className="block px-4 py-3 text-sm text-brand-navy/70 hover:bg-brand-cream hover:text-brand-navy rounded-xl transition-all font-medium"
                       >
                         {link.name}
                       </Link>
@@ -77,8 +78,8 @@ export default function Navbar() {
               onMouseEnter={() => setActiveDropdown('services')}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center gap-1 text-sm font-bold text-gray-600 hover:text-blue-700 transition">
-                Services <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+              <button className="flex items-center gap-1 text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">
+                Services <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
               
               <AnimatePresence>
@@ -87,13 +88,13 @@ export default function Navbar() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute left-0 mt-2 w-60 bg-white border border-gray-100 shadow-2xl rounded-2xl p-2"
+                    className="absolute left-0 mt-1 w-60 bg-white border border-brand-gold/10 shadow-2xl rounded-2xl p-2"
                   >
                     {serviceLinks.map((link) => (
                       <Link 
                         key={link.name} 
                         href={link.href} 
-                        className="block px-4 py-3 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-700 rounded-xl transition font-medium"
+                        className="block px-4 py-3 text-sm text-brand-navy/70 hover:bg-brand-cream hover:text-brand-navy rounded-xl transition-all font-medium"
                       >
                         {link.name}
                       </Link>
@@ -103,12 +104,12 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link href="/store" className="text-sm font-bold text-gray-600 hover:text-blue-700 transition">Store</Link>
+            <Link href="/store" className="text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">Store</Link>
             
-            {/* CTA Button */}
+            {/* Blended CTA Button */}
             <Link 
               href="/contact" 
-              className="ml-4 rounded-full bg-blue-700 px-6 py-2.5 text-sm font-extrabold text-white hover:bg-blue-800 transition shadow-md hover:shadow-blue-200"
+              className="ml-4 rounded-xl bg-brand-navy px-6 py-3 text-xs font-black uppercase tracking-widest text-brand-gold hover:bg-black transition-all shadow-lg hover:shadow-brand-gold/10 active:scale-95"
             >
               Contact Betapersin
             </Link>
@@ -116,7 +117,7 @@ export default function Navbar() {
 
           {/* 3. MOBILE TOGGLE */}
           <button 
-            className="lg:hidden p-2 text-gray-600" 
+            className="lg:hidden p-2 text-brand-navy" 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -131,23 +132,27 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden bg-white border-b border-gray-100 overflow-hidden"
+            className="lg:hidden bg-brand-cream border-b border-brand-gold/10 overflow-hidden"
           >
-            <div className="flex flex-col p-6 gap-5">
-              <Link href="/" className="font-bold text-gray-900" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-              <Link href="/about" className="font-bold text-gray-900" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+            <div className="flex flex-col p-6 gap-6">
+              <Link href="/" className="font-black text-brand-navy" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+              <Link href="/about" className="font-black text-brand-navy" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
               
-              <div className="space-y-3">
-                <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">Courses</p>
+              <div className="space-y-4">
+                <p className="text-[10px] font-black text-brand-gold uppercase tracking-[0.2em]">Our Courses</p>
                 {courseLinks.map(l => (
-                  <Link key={l.name} href={l.href} className="block pl-2 text-sm font-semibold text-gray-500" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link key={l.name} href={l.href} className="block pl-2 text-sm font-bold text-brand-navy/60" onClick={() => setIsMobileMenuOpen(false)}>
                     {l.name}
                   </Link>
                 ))}
               </div>
 
-              <Link href="/store" className="font-bold text-gray-900" onClick={() => setIsMobileMenuOpen(false)}>Store</Link>
-              <Link href="/contact" className="font-bold text-blue-700 pt-2 border-t border-gray-100" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/store" className="font-black text-brand-navy" onClick={() => setIsMobileMenuOpen(false)}>Store</Link>
+              <Link 
+                href="/contact" 
+                className="inline-block w-full text-center bg-brand-navy text-brand-gold py-4 rounded-xl font-black uppercase tracking-widest text-xs" 
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Contact Betapersin
               </Link>
             </div>

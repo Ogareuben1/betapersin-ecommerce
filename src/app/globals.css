@@ -1,26 +1,35 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Betapersin Brand Theme - Updated with Exact Hex Codes */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --navy: #0D1B2A;
+  --teal: #00A896;
+  --gold: #C9A84C;
+  --cream: #FAF7F2;
+  
+  /* Mapping brand colors to standard utility variables */
+  --background: var(--cream);
+  --foreground: var(--navy);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Automatic Heading Styles */
+h1, h2, h3 {
+  color: var(--gold);
+  font-weight: 800; /* Increased weight for a more premium look */
+}
+
+/* Optional: Selection color for better UX */
+::selection {
+  background-color: var(--gold);
+  color: var(--navy);
 }

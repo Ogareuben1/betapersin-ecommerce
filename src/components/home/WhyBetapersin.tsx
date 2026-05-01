@@ -1,11 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ShieldCheck, Award, Users, Zap } from 'lucide-react';
+import { ShieldCheck, Zap } from 'lucide-react';
 
 export default function WhyBetapersin() {
   return (
-    <section className="bg-slate-900 py-24 text-white overflow-hidden">
+    /* Changed bg-slate-900 to bg-brand-cream and text to brand-navy */
+    <section className="bg-brand-cream py-24 text-brand-navy overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           
@@ -17,17 +18,17 @@ export default function WhyBetapersin() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-8">
-              Why Learn With <span className="text-blue-400">Betapersin</span>
+              Why Learn With <span className="text-brand-gold">Betapersin</span>
             </h2>
             
-            <div className="space-y-6 text-lg leading-relaxed text-slate-300">
-              <p className="font-semibold text-white text-xl">
+            <div className="space-y-6 text-lg leading-relaxed text-brand-navy/80">
+              <p className="font-bold text-brand-navy text-xl">
                 Most cybersecurity training tells you what the field is. Betapersin shows you what it actually looks like from the inside.
               </p>
               <p>
-                The knowledge here comes from 15 years of working inside Tier 1 financial institutions across Europe. Not theory. Not slides. Real governance frameworks, real identity programmes, real access controls built and managed inside some of the most regulated environments in the world.
+                The knowledge here comes from many years of working inside Tier 1 financial institutions across Europe. Not theory. Not slides. Real governance frameworks, real identity programmes, real access controls built and managed inside some of the most regulated environments in the world.
               </p>
-              <p className="flex items-center gap-3 font-bold text-blue-400 italic">
+              <p className="flex items-center gap-3 font-bold text-brand-gold italic">
                 <ShieldCheck className="h-6 w-6" />
                 CISSP certified. Practically trained. Human in approach.
               </p>
@@ -45,9 +46,10 @@ export default function WhyBetapersin() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="rounded-3xl bg-white/5 p-8 lg:p-12 border border-white/10 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold mb-8 text-white flex items-center gap-2">
-                <Zap className="h-6 w-6 text-yellow-400" />
+            {/* Swapped white/5 bg for a Navy background to make the list POP */}
+            <div className="rounded-2xl bg-brand-navy p-8 lg:p-12 shadow-2xl">
+              <h3 className="text-2xl font-bold mb-8 text-brand-cream flex items-center gap-2">
+                <Zap className="h-6 w-6 text-brand-gold" />
                 The Betapersin Standard
               </h3>
               
@@ -64,19 +66,13 @@ export default function WhyBetapersin() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 + (i * 0.1) }}
-                    className="flex items-center gap-4 text-xl font-medium"
+                    className="flex items-center gap-4 text-xl font-medium text-brand-cream"
                   >
-                    <div className="h-2 w-2 rounded-full bg-blue-500" />
+                    <div className="h-2 w-2 rounded-full bg-brand-gold" />
                     {text}
                   </motion.li>
                 ))}
               </ul>
-
-              {/* Decorative "15 Years" Badge */}
-              <div className="absolute -bottom-6 -right-6 h-32 w-32 rounded-full bg-blue-600 flex flex-col items-center justify-center text-center shadow-2xl rotate-12 border-4 border-slate-900">
-                <span className="text-2xl font-black">15</span>
-                <span className="text-[10px] font-bold uppercase">Years XP</span>
-              </div>
             </div>
           </motion.div>
 
