@@ -47,18 +47,18 @@ export default function AboutClient() {
               </p>
               <div className="h-1 w-20 bg-brand-gold my-8"></div>
               <p>
-                I work at the intersection of identity governance, access control, privileged access and enterprise security — helping organisations move from operational comfort to measurable clarity. And helping individuals move from confusion to career confidence.
+                I work at the intersection of identity governance, access control, privileged access and enterprise security helping organisations move from operational comfort to measurable clarity. And helping individuals move from confusion to career confidence.
               </p>
               
               <div className="my-12 p-8 bg-brand-navy rounded-[2rem] text-brand-cream relative italic shadow-2xl">
                 <span className="text-6xl text-brand-gold absolute top-4 left-4 opacity-20 font-serif">"</span>
                 <p className="relative z-10 text-xl font-medium">
-                  When these three disciplines are not properly understood or governed, security risk increases dramatically. When they are — organisations become resilient and professionals become valuable.
+                  When these three disciplines are not properly understood or governed, security risk increases dramatically. When they are organisations become resilient and professionals become valuable.
                 </p>
               </div>
 
               <p>
-                I help beginners, career switchers and professionals already working in IT or financial services understand how IAM, PAM and GRC work in real enterprise environments — not just in theory.
+                I help beginners, career switchers and professionals already working in IT or financial services understand how IAM, PAM and GRC work in real enterprise environments not just in theory.
               </p>
               <p className="text-xl font-black text-brand-navy">
                 My goal is simple: To make identity security clear, practical and accessible to anyone willing to learn.
@@ -96,7 +96,7 @@ export default function AboutClient() {
                 "This approach helps learners move beyond certifications and understand how IAM operates in real organisations like Tier 1 Banks and Global Fintechs."
               </p>
               <div className="mt-6 flex items-center gap-3">
-                <div className="h-px w-8 bg-brand-gold"></div>
+                <div className="h-px w-8 bg-brand-gold">.</div>
                 <span className="text-brand-gold font-black uppercase tracking-widest text-xs">The Betapersin Method</span>
               </div>
             </div>
