@@ -73,7 +73,6 @@ export default function StorePage() {
     <main className="min-h-screen bg-brand-cream pt-20">
       <Navbar />
 
-      {/* Store Header */}
       <section className="bg-brand-navy border-b border-brand-gold/20 py-20 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-brand-gold font-bold uppercase tracking-widest text-xs mb-4">Betapersin Store</h2>
@@ -84,19 +83,13 @@ export default function StorePage() {
         </div>
       </section>
 
-      {/* Courses & Bundle Grid */}
       <section className="py-20 px-4 md:px-8">
         <div className="container mx-auto space-y-24 md:space-y-32">
           {courses.map((course) => (
             <div key={course.id} className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
               <div className="space-y-8">
                 <div className={`relative aspect-[4/3] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 ${course.highlight ? 'border-brand-gold' : 'border-white'} bg-brand-navy`}>
-                  <Image 
-                    src={course.image} 
-                    alt={course.title} 
-                    fill
-                    className="object-contain" 
-                  />
+                  <Image src={course.image} alt={course.title} fill className="object-contain" />
                   <div className="absolute z-10 top-4 right-4 md:top-6 md:right-6 bg-brand-navy text-brand-gold px-4 py-2 md:px-6 md:py-3 rounded-xl md:rounded-2xl shadow-xl font-black text-xl md:text-2xl border border-brand-gold/30">
                     {course.price}
                   </div>
@@ -132,10 +125,7 @@ export default function StorePage() {
                     ))}
                   </ul>
                 </div>
-                <a 
-                  href={course.link} 
-                  target="_blank" 
-                  rel="nofollow"
+                <a href={course.link} target="_blank" rel="nofollow"
                   className={`w-full py-4 md:py-5 rounded-xl md:rounded-2xl font-black text-lg md:text-xl shadow-xl transition-all flex items-center justify-center gap-3 ${course.highlight ? 'bg-brand-gold text-brand-navy hover:bg-brand-navy hover:text-brand-gold' : 'bg-brand-navy text-brand-gold hover:bg-black'}`}
                 >
                   <ShoppingCart className="h-5 w-5 md:h-6 md:w-6" /> {course.highlight ? "BUY THE BUNDLE" : "BUY THE FULL COURSE"}
@@ -146,16 +136,13 @@ export default function StorePage() {
         </div>
       </section>
 
-      {/* Ebooks Section */}
       <section id="ebooks-section" className="py-24 bg-brand-cream text-brand-navy overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black mb-4 text-brand-gold">Cybersecurity Ebooks</h2>
             <p className="text-brand-navy/70 text-sm md:text-base italic">Practical guides that break down identity security in plain English.</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
-            {/* Ebook 1 */}
             <div className="relative group rounded-[1.5rem] md:rounded-[2rem] overflow-hidden h-[450px] border border-brand-gold/10">
               <Image src="/isexplained.jpeg" fill className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity Explained" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-8 flex flex-col justify-end">
@@ -168,7 +155,6 @@ export default function StorePage() {
               </div>
             </div>
 
-            {/* Ebook 2 */}
             <div className="relative group rounded-[1.5rem] md:rounded-[2rem] overflow-hidden h-[450px] border border-brand-gold/10">
               <Image src="/autopilot.jpeg" fill className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity on Autopilot" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-8 flex flex-col justify-end">
@@ -181,7 +167,6 @@ export default function StorePage() {
               </div>
             </div>
 
-            {/* Ebook 3 */}
             <div className="relative group rounded-[1.5rem] md:rounded-[2rem] overflow-hidden h-[450px] border border-brand-gold/10">
               <Image src="https://public-files.gumroad.com/s6dfdiv7pcgv0e7mszrnfn7unnek" fill className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Hired Identity Engineer" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-8 flex flex-col justify-end">
@@ -196,14 +181,16 @@ export default function StorePage() {
           </div>
         </div>
       </section>
-            <div className="p-8 md:p-12 bg-brand-navy rounded-[2rem] md:rounded-[3rem] text-brand-cream shadow-xl">
-              <span className="text-brand-gold font-black text-[10px] md:text-xs uppercase tracking-widest mb-4 block">Career Services</span>
-              <h3 className="text-2xl md:text-3xl font-black mb-4">Ready to Land the Role?</h3>
-              <p className="text-brand-cream/70 mb-8 text-sm md:text-base italic">CV Reviews, LinkedIn Optimization, and Mock Interviews from a Tier 1 professional.</p>
-              <Link href="/services/professional" className="inline-flex items-center gap-2 bg-brand-gold text-brand-navy px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-black hover:bg-brand-cream transition text-sm md:text-base shadow-lg">
-                VIEW ALL SERVICES <Briefcase className="h-4 w-4 md:h-5 md:w-5" />
-              </Link>
-            </div>
+
+      <section className="py-24 bg-brand-cream px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="p-8 md:p-12 bg-brand-navy rounded-[2rem] md:rounded-[3rem] text-brand-cream shadow-xl text-center">
+            <span className="text-brand-gold font-black text-[10px] md:text-xs uppercase tracking-widest mb-4 block">Career Services</span>
+            <h3 className="text-2xl md:text-3xl font-black mb-4">Ready to Land the Role?</h3>
+            <p className="text-brand-cream/70 mb-8 text-sm md:text-base italic max-w-2xl mx-auto">CV Reviews, LinkedIn Optimization, and Mock Interviews from a Tier 1 professional.</p>
+            <Link href="/services/professional" className="inline-flex items-center gap-2 bg-brand-gold text-brand-navy px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-black hover:bg-brand-cream transition text-sm md:text-base shadow-lg">
+              VIEW ALL SERVICES <Briefcase className="h-4 w-4 md:h-5 md:w-5" />
+            </Link>
           </div>
         </div>
       </section>
