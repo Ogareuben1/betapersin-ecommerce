@@ -156,7 +156,8 @@ export default function StorePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {/* Ebook 1 */}
             <div className="relative group rounded-[1.5rem] md:rounded-[2rem] overflow-hidden h-[450px] border border-brand-gold/10">
-              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=699,fit=crop/GaacUkLWhRTud68Z/identity_security_explained_cover-TQf4I2wKM3Wq5cqP.png" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity Explained" />
+              <img src="/isexplained.jpeg",
+               className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity Explained" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-8 flex flex-col justify-end">
                 <h3 className="text-2xl font-black mb-2">Identity Security Explained</h3>
                 <p className="text-brand-cream/80 text-sm mb-6">Fundamentals for beginners. The perfect entry point starting from zero.</p>
@@ -169,7 +170,8 @@ export default function StorePage() {
 
             {/* Ebook 2 */}
             <div className="relative group rounded-[1.5rem] md:rounded-[2rem] overflow-hidden h-[450px] border border-brand-gold/10">
-              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,fit=crop/GaacUkLWhRTud68Z/chatgpt-image-apr-19-2026-03_28_57-pm-PzFcQafE9h0s87Fn.png" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity on Autopilot" />
+              <img src="/autopilot.jpeg",
+               className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity on Autopilot" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-8 flex flex-col justify-end">
                 <h3 className="text-2xl font-black mb-2">Identity on Autopilot</h3>
                 <p className="text-brand-cream/80 text-sm mb-6">The complete guide to automating identity lifecycle in Tier 1 environments.</p>
