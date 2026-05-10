@@ -196,20 +196,6 @@ export default function StorePage() {
           </div>
         </div>
       </section>
-
-      {/* Free Resource & Services */}
-      <section className="py-24 bg-brand-cream px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <div className="p-8 md:p-12 bg-white rounded-[2rem] md:rounded-[3rem] border border-brand-gold/20 shadow-sm relative overflow-hidden">
-              <span className="text-brand-gold font-black text-[10px] md:text-xs uppercase tracking-widest mb-4 block">Free Resource</span>
-              <h3 className="text-2xl md:text-3xl font-black mb-4 text-brand-navy">Why Your IAM Is Failing</h3>
-              <p className="text-slate-600 mb-8 text-sm md:text-base italic">A free diagnostic ebook with fictional case studies and a self-scoring assessment.</p>
-              <a href="https://betapersin.gumroad.com/l/ddbjmp" target="_blank" rel="nofollow" className="inline-flex items-center gap-2 font-black text-brand-navy border-b-4 border-brand-gold pb-1 hover:gap-4 transition-all text-sm md:text-base">
-                DOWNLOAD FREE <Download className="h-4 w-4 md:h-5 md:w-5" />
-              </a>
-            </div>
-
             <div className="p-8 md:p-12 bg-brand-navy rounded-[2rem] md:rounded-[3rem] text-brand-cream shadow-xl">
               <span className="text-brand-gold font-black text-[10px] md:text-xs uppercase tracking-widest mb-4 block">Career Services</span>
               <h3 className="text-2xl md:text-3xl font-black mb-4">Ready to Land the Role?</h3>
