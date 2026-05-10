@@ -5,6 +5,7 @@ import { CheckCircle, ArrowRight, ShoppingCart, Download, Briefcase } from 'luci
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const courses = [
   {
@@ -13,7 +14,6 @@ const courses = [
     subtitle: "Become IAM analyst ready with real enterprise confidence",
     price: "£299",
     link: "https://betapersin.gumroad.com/l/Zero2IAM", 
-    // Save your first uploaded image as 'iam-course.png' in the public folder
     image: "/iam-course.png",
     description: "A structured Identity and Access Management foundations programme built for professionals who are ready to break into one of the most in demand specialisms in financial services.",
     subtext: "You do not need a background in IT to start this course. You need the decision to begin.",
@@ -34,7 +34,6 @@ const courses = [
     subtitle: "From governance to access. A practical guide for security professionals.",
     price: "£249",
     link: "https://betapersin.gumroad.com/l/grc-full-module-iam-controls", 
-    // Save your second uploaded image as 'grc-course.png' in the public folder
     image: "/grc-course.png",
     description: "Built for those in IAM moving to senior governance roles or cybersecurity professionals wanting to master the compliance and audit side of enterprise security.",
     subtext: "Finally understand what GRC actually means in a real-world, regulated environment.",
@@ -91,20 +90,22 @@ export default function StorePage() {
           {courses.map((course) => (
             <div key={course.id} className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
               <div className="space-y-8">
-                {/* Image Container with object-contain to prevent cutting */}
-                <div className={`relative rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 ${course.highlight ? 'border-brand-gold' : 'border-white'} bg-brand-navy`}>
-                  <img 
+                <div className={`relative aspect-[4/3] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 ${course.highlight ? 'border-brand-gold' : 'border-white'} bg-brand-navy`}>
+                  <Image 
                     src={course.image} 
                     alt={course.title} 
-                    className="w-full h-auto object-contain" 
+                    fill
+                    className="object-contain" 
                   />
-                  <div className="absolute top-4 right-4 md:top-6 md:right-6 bg-brand-navy text-brand-gold px-4 py-2 md:px-6 md:py-3 rounded-xl md:rounded-2xl shadow-xl font-black text-xl md:text-2xl border border-brand-gold/30">
+                  <div className="absolute z-10 top-4 right-4 md:top-6 md:right-6 bg-brand-navy text-brand-gold px-4 py-2 md:px-6 md:py-3 rounded-xl md:rounded-2xl shadow-xl font-black text-xl md:text-2xl border border-brand-gold/30">
                     {course.price}
                   </div>
                 </div>
                 {course.trialImage && (
                   <div className="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm flex items-center gap-4 md:gap-6">
-                    <img src={course.trialImage} className="w-16 h-16 md:w-20 md:h-20 rounded-xl object-cover shrink-0" alt="Trial" />
+                    <div className="relative w-16 h-16 md:w-20 md:h-20 shrink-0">
+                      <Image src={course.trialImage} fill className="rounded-xl object-cover" alt="Trial" />
+                    </div>
                     <div>
                       <h4 className="font-bold text-slate-900 text-sm md:text-base">Try Module 1 for free</h4>
                       <a href={course.trialLink} target="_blank" rel="nofollow" className="text-xs md:text-sm font-black text-brand-gold flex items-center gap-1 mt-1 hover:text-brand-navy transition-colors">
@@ -150,16 +151,15 @@ export default function StorePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black mb-4 text-brand-gold">Cybersecurity Ebooks</h2>
-            <p className="text-brand-cream/70 text-sm md:text-base italic">Practical guides that break down identity security in plain English.</p>
+            <p className="text-brand-navy/70 text-sm md:text-base italic">Practical guides that break down identity security in plain English.</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {/* Ebook 1 */}
             <div className="relative group rounded-[1.5rem] md:rounded-[2rem] overflow-hidden h-[450px] border border-brand-gold/10">
-              <img src="/isexplained.jpeg",
-               className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity Explained" />
+              <Image src="/isexplained.jpeg" fill className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity Explained" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-8 flex flex-col justify-end">
-                <h3 className="text-2xl font-black mb-2">Identity Security Explained</h3>
+                <h3 className="text-2xl font-black mb-2 text-brand-cream">Identity Security Explained</h3>
                 <p className="text-brand-cream/80 text-sm mb-6">Fundamentals for beginners. The perfect entry point starting from zero.</p>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-black text-brand-gold">£24.99</span>
@@ -170,10 +170,9 @@ export default function StorePage() {
 
             {/* Ebook 2 */}
             <div className="relative group rounded-[1.5rem] md:rounded-[2rem] overflow-hidden h-[450px] border border-brand-gold/10">
-              <img src="/autopilot.jpeg",
-               className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity on Autopilot" />
+              <Image src="/autopilot.jpeg" fill className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Identity on Autopilot" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-8 flex flex-col justify-end">
-                <h3 className="text-2xl font-black mb-2">Identity on Autopilot</h3>
+                <h3 className="text-2xl font-black mb-2 text-brand-cream">Identity on Autopilot</h3>
                 <p className="text-brand-cream/80 text-sm mb-6">The complete guide to automating identity lifecycle in Tier 1 environments.</p>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-black text-brand-gold">£97</span>
@@ -184,9 +183,9 @@ export default function StorePage() {
 
             {/* Ebook 3 */}
             <div className="relative group rounded-[1.5rem] md:rounded-[2rem] overflow-hidden h-[450px] border border-brand-gold/10">
-              <img src="https://public-files.gumroad.com/s6dfdiv7pcgv0e7mszrnfn7unnek" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Hired Identity Engineer" />
+              <Image src="https://public-files.gumroad.com/s6dfdiv7pcgv0e7mszrnfn7unnek" fill className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Hired Identity Engineer" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent p-8 flex flex-col justify-end">
-                <h3 className="text-2xl font-black mb-2">HIRED: Identity Engineer</h3>
+                <h3 className="text-2xl font-black mb-2 text-brand-cream">HIRED: Identity Engineer</h3>
                 <p className="text-brand-cream/80 text-sm mb-6">The blueprint to landing your first or next role as an Identity Engineer.</p>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-black text-brand-gold">£49.99</span>
