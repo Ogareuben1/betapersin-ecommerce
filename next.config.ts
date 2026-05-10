@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* Fix for images not showing */
+  /* Top-level config for Next.js 16+ */
+  reactCompiler: true,
+
+  /* Image fixes for Hostinger environment */
   images: {
     unoptimized: true, 
     remotePatterns: [
@@ -15,9 +18,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  /* Keep your existing compiler setting */
+
+  /* Any other standard experimental options can go here */
   experimental: {
-    reactCompiler: true,
+    // leave empty if you don't have others
   },
 };
 
