@@ -39,7 +39,7 @@ const freebies = [
     buttonText: "Download Free",
     href: "https://betapersin.gumroad.com/l/why-iam-failing",
     icon: <FileDown className="h-6 w-6 text-brand-gold" />,
-    type: "Whitepaper"
+    type: "FREE GUIDE"
   }
 ];
 
