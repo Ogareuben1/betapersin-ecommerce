@@ -64,10 +64,10 @@ export default function IAMAnalyst() {
             {/* Module 1 Box */}
             <div className="p-10 bg-brand-navy rounded-[3rem] border border-brand-gold/20 shadow-2xl">
               <h2 className="text-2xl font-black text-brand-gold mb-6 uppercase tracking-tight">IAM & PAM Career Course</h2>
-              <p className="text-brand-cream/70 mb-8 font-medium">From zero knowledge to job ready using enterprise-grade frameworks.</p>
+              <p className="text-brand-cream/70 mb-8 font-medium">From zero knowledge to job ready using enterprise grade frameworks.</p>
               
               <h3 className="text-sm font-black text-brand-gold mb-6 uppercase tracking-widest flex items-center gap-2">
-                <span className="h-px w-8 bg-brand-gold"></span> Module 1 Roadmap
+                <span className="h-px w-8 bg-brand-gold">.</span> Module 1 Roadmap
               </h3>
               
               <ul className="space-y-4">
@@ -90,7 +90,7 @@ export default function IAMAnalyst() {
             <div className="flex flex-col gap-8">
               <div className="p-10 bg-white rounded-[3rem] border border-brand-gold/20 shadow-xl">
                 <div className="flex items-center gap-3 mb-6 text-brand-navy">
-                  <Terminal className="text-brand-gold h-8 w-8" /> 
+                  <Terminal className="text-brand-gold h-8 w-8"/> 
                   <h2 className="text-2xl font-black uppercase tracking-tight">Tools of IAM</h2>
                 </div>
                 <p className="text-slate-600 leading-relaxed font-medium mb-6">
@@ -123,7 +123,7 @@ export default function IAMAnalyst() {
           <div className="text-center mb-16">
             <h2 className="text-brand-gold font-black uppercase tracking-widest text-xs mb-4">Practical Curriculum</h2>
             <h3 className="text-4xl lg:text-5xl font-black text-brand-navy tracking-tight">
-              Microsoft Entra ID — 11 Days of Practice
+              Microsoft Entra ID 11 Days of Practice
             </h3>
           </div>
           
