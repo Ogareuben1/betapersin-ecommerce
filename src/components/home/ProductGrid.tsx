@@ -42,12 +42,12 @@ const courses = [
     title: "PAM Foundations",
     subtitle: "Your introduction to Privileged Access Management. Learn how organisations identify, control and monitor their most sensitive accounts.",
     details: "Introduction to vaulted credentials, session recording, and JIT access.",
-    price: "Coming Soon",
+    price: "",
     icon: <Lock className="h-6 w-6 text-brand-gold/40" />,
-    tag: "Waitlist",
-    buttonText: "Join the Waitlist",
+    tag: "COURSE PREVIEW",
+    buttonText: "START FREE",
     isWaitlist: true,
-    link: "mailto:hello@betapersin.com"
+    link: "https://betapersin.gumroad.com/l/pam-foundations-module-1"
   },
   {
     id: 5,
