@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Image component
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
@@ -110,6 +110,9 @@ export default function Navbar() {
 
             <Link href="/store" className="text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">Store</Link>
             
+            {/* NEW: Free Store Nav Link */}
+            <Link href="/free-store" className="text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">Free Store</Link>
+            
             <Link 
               href="/contact" 
               className="ml-4 rounded-xl bg-brand-navy px-6 py-3 text-xs font-black uppercase tracking-widest text-brand-gold hover:bg-black transition-all shadow-lg hover:shadow-brand-gold/10 active:scale-95"
@@ -151,6 +154,10 @@ export default function Navbar() {
               </div>
 
               <Link href="/store" className="font-black text-brand-navy" onClick={() => setIsMobileMenuOpen(false)}>Store</Link>
+              
+              {/* NEW: Mobile Free Store Link */}
+              <Link href="/free-store" className="font-black text-brand-navy" onClick={() => setIsMobileMenuOpen(false)}>Free Store</Link>
+
               <Link 
                 href="/contact" 
                 className="inline-block w-full text-center bg-brand-navy text-brand-gold py-4 rounded-xl font-black uppercase tracking-widest text-xs" 
