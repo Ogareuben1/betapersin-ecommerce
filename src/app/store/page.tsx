@@ -25,7 +25,7 @@ const courses = [
       "Career Prep: IAM CV building and Interview answers",
       "SC-900 and SC-300 certification guidance"
     ],
-    trialImage: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=1000,fit=crop/GaacUkLWhRTud68Z/chatgpt-image-apr-17-2026-06_01_07-am-pVomycIk5QRKbZcu.png",
+    trialImage: "https://public-files.gumroad.com/v7pzv7cbfgq4t5rvz8oida5ua1d5",
     trialLink: "https://betapersin.gumroad.com/l/FreeModule"
   },
   {
@@ -45,16 +45,16 @@ const courses = [
       "Module 9-10: Security Business Partnering & GRC Tools (SailPoint, Archer)",
       "Module 11: Real-world scenarios from 15 years inside Tier 1 Banks"
     ],
-    trialImage: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=1000,fit=crop/GaacUkLWhRTud68Z/grc-1-al53UX3J3bParlkT.webp",
+    trialImage: "https://public-files.gumroad.com/x0mbdqpwcufl2xl88tsxdi0fthbj",
     trialLink: "https://betapersin.gumroad.com/l/GRCModule1Free"
   },
-  {
+ {
     id: 'bundle',
     title: "GRC and IAM Complete Bundle",
     subtitle: "Both courses. One complete cybersecurity career pathway.",
     price: "£399",
     link: "https://betapersin.gumroad.com/l/Bundle",
-    image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=1000,fit=crop/GaacUkLWhRTud68Z/chatgpt-image-apr-16-2026-02_11_36-pm-aqBS19MO2AZr3jGw.png",
+    image: "https://public-files.gumroad.com/ewv2aue7yedhnutrz31en5exhuxz",
     description: "This bundle gives you both complete courses together for one price. Take your career from zero background to confident in both technical and governance sides of identity.",
     subtext: "This is the full career pathway, not half of it.",
     bullets: [

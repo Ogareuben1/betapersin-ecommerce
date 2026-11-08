@@ -96,7 +96,7 @@ export default function AboutClient() {
                 "This approach helps learners move beyond certifications and understand how IAM operates in real organisations like Tier 1 Banks and Global Fintechs."
               </p>
               <div className="mt-6 flex items-center gap-3">
-                <div className="h-px w-8 bg-brand-gold">.</div>
+                <div className="h-2 w-2 rounded-full bg-brand-gold"></div>
                 <span className="text-brand-gold font-black uppercase tracking-widest text-xs">The Betapersin Method</span>
               </div>
             </div>
