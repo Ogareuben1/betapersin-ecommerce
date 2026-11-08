@@ -110,8 +110,8 @@ export default function Navbar() {
 
             <Link href="/store" className="text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">Store</Link>
             
-            {/* NEW: Free Store Nav Link */}
-            <Link href="/free-store" className="text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">Free Store</Link>
+            {/* HIDDEN FOR NOW: Free Store Nav Link */}
+            {/* <Link href="/free-store" className="text-sm font-bold text-brand-navy/70 hover:text-brand-navy transition-colors">Free Store</Link> */}
             
             <Link 
               href="/contact" 
@@ -155,8 +155,8 @@ export default function Navbar() {
 
               <Link href="/store" className="font-black text-brand-navy" onClick={() => setIsMobileMenuOpen(false)}>Store</Link>
               
-              {/* NEW: Mobile Free Store Link */}
-              <Link href="/free-store" className="font-black text-brand-navy" onClick={() => setIsMobileMenuOpen(false)}>Free Store</Link>
+              {/* HIDDEN FOR NOW: Mobile Free Store Link */}
+              {/* <Link href="/free-store" className="font-black text-brand-navy" onClick={() => setIsMobileMenuOpen(false)}>Free Store</Link> */}
 
               <Link 
                 href="/contact" 
